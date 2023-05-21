@@ -13,6 +13,10 @@
     display: flex;
     justify-content: center;
 }
+@mixin center-vertically {
+    display: inline-block;
+    vertical-align: middle;
+}
 html {
     scroll-behavior: smooth;
     background-color: #47BADE; //depending on time of the day (also maybe weather condition)
@@ -59,14 +63,12 @@ main {
                 height: 2rem;
                 border-radius: 99px;
                 img {
-                    display: inline-block;
-                    vertical-align: middle;
+                    @include center-vertically;
                     width: 25px;
                     transform: rotateY(180deg);
                 }
                 h3 {
-                    display: inline-block;
-                    vertical-align: middle;
+                    @include center-vertically;
                 }
             }
         }
@@ -82,14 +84,20 @@ main {
             border-radius: 32px;
         }
         .container{
-
-        }
-        .wind {
-            width: 670px;
-        }
-        .pressure {
-            width: 670px;
-            margin-top: 10px;
+            img {
+                display: inline-block;
+            }
+            h3 {
+                display: inline-block;
+                font-size: 2rem;
+            }
+            .wind {
+                width: 670px;
+            }
+            .pressure {
+                width: 670px;
+                margin-top: 10px;
+            }
         }
         .secondary-info {
             width: 670px;

@@ -75,10 +75,17 @@ main #other-params .card {
   background: rgba(255, 255, 255, 0.14);
   border-radius: 32px;
 }
-main #other-params .wind {
+main #other-params .container img {
+  display: inline-block;
+}
+main #other-params .container h3 {
+  display: inline-block;
+  font-size: 2rem;
+}
+main #other-params .container .wind {
   width: 670px;
 }
-main #other-params .pressure {
+main #other-params .container .pressure {
   width: 670px;
   margin-top: 10px;
 }
