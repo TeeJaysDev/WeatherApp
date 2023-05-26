@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherAPP</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" type="application/json" defer></script>
 </head>
 <body>
     <nav>
@@ -14,7 +13,7 @@
 
         </div>
         <div class="city">
-            <h2>Leszno</h2>
+            <h2 id="city-name">Leszno</h2>
         </div>
         <div class="icon">
 
@@ -23,7 +22,7 @@
     <main>
         <section id="general-info">
             <div class="temperature">
-                <h1>
+                <h1 id="temperature">
                     16°C
                 </h1>
             </div>
@@ -64,5 +63,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js" defer></script>
 </body>
 </html>
