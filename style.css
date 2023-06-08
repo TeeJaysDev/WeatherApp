@@ -75,21 +75,47 @@ main #other-params .card {
   background: rgba(255, 255, 255, 0.14);
   border-radius: 32px;
 }
+main #other-params .container {
+  text-align: center;
+}
 main #other-params .container img {
   display: inline-block;
+  margin: auto 10rem auto 3rem;
 }
 main #other-params .container h3 {
   display: inline-block;
   font-size: 2rem;
+  margin-right: 2rem;
 }
 main #other-params .container .wind {
   width: 670px;
+  display: flex;
+  align-items: center;
 }
 main #other-params .container .pressure {
   width: 670px;
+  display: flex;
+  align-items: center;
   margin-top: 10px;
 }
 main #other-params .secondary-info {
-  width: 670px;
+  max-width: 670px;
   height: calc(20rem + 10px);
+  font-size: 1.5rem;
+}
+main #other-params .secondary-info ul {
+  position: relative;
+  width: 80%;
+  margin: 7.5% 10% auto 10%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+main #other-params .secondary-info ul li {
+  display: flex;
+  padding: 10px 20px;
+  margin: auto 0;
+  border-bottom: 1px solid;
+}
+main #other-params .secondary-info ul li span:nth-child(1) {
+  width: 1000px;
 }/*# sourceMappingURL=style.css.map */

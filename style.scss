@@ -84,24 +84,49 @@ main {
             border-radius: 32px;
         }
         .container{
+            text-align: center;
             img {
                 display: inline-block;
+                margin: auto 10rem auto 3rem;
             }
             h3 {
                 display: inline-block;
                 font-size: 2rem;
+                margin-right: 2rem;
             }
             .wind {
                 width: 670px;
+                display: flex;
+                align-items: center;
             }
             .pressure {
                 width: 670px;
+                display: flex;
+                align-items: center;
                 margin-top: 10px;
             }
         }
+
         .secondary-info {
-            width: 670px;
+            max-width: 670px;
             height: calc(20rem + 10px);
+            font-size: 1.5rem;
+            ul {
+                position: relative;
+                width: 80%;
+                margin: 7.5% 10% auto 10%;
+                padding: 10px;
+                box-sizing: border-box;
+                li {
+                    display: flex;
+                    padding: 10px 20px;
+                    margin: auto 0;
+                    border-bottom: 1px solid;
+                    span:nth-child(1) {
+                        width: 1000px;
+                    }
+                }
+            }
         }
     }
 } 
