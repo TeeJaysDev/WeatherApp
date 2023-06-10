@@ -19,7 +19,6 @@
 }
 html {
     scroll-behavior: smooth;
-    background-color: #47BADE; //depending on time of the day (also maybe weather condition)
 }
 nav {
     .plus-menu {
@@ -34,7 +33,8 @@ nav {
         }
     }
     .icon {
-
+        float: right;
+        margin: -3rem 2rem auto -200px;
     }
 }
 main {
@@ -70,6 +70,20 @@ main {
                 h3 {
                     @include center-vertically;
                 }
+            }
+            .modal {
+                position: absolute;
+                padding: 0.5rem;
+                background: rgb(133, 133, 133);
+                z-index: 10;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 30rem;
+                height: 20rem;
+            }
+            dialog::backdrop {
+                background-color: #43434377;
             }
         }
     }
