@@ -74,13 +74,51 @@ main {
             .modal {
                 position: absolute;
                 padding: 0.5rem;
-                background: rgb(133, 133, 133);
+                background: #252525;
                 z-index: 10;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 30rem;
-                height: 20rem;
+                width: 30%;
+                height: 12rem;
+                #modal_nav {
+                    display: flex;
+                    h2 {
+                        margin: 0.5rem auto auto 1rem;
+                    }
+                    button {
+                        font-size: 1rem;
+                        color: #252525;
+                        background-color: #FFFFFF;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                    }
+                }
+                .aqi_modal_info {
+                    display: flex;
+                    gap: 1rem 1rem;
+                    margin: 1rem auto auto 1.25rem;
+                    #aqi_modal {
+                        font-size: 3rem;
+                    }
+                }
+                ul {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-top: 1rem;
+                    li {
+                        span {
+                            display: block;
+                        }
+                        #PM2_5, #PM10, #SO2, #NO2, #O3, #CO {
+                            font-size: 1.3rem;
+                        }
+                        .compound {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
             }
             dialog::backdrop {
                 background-color: #43434377;
@@ -143,4 +181,4 @@ main {
             }
         }
     }
-} 
+}

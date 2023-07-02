@@ -32,9 +32,41 @@
                     <img src="img/leaf.png" alt="leaf icon">
                     <h3 id="aqi"></h3>
                 </button>
-                <dialog data-modal class="modal" open>
-                    <p>this is a modal</p>
-                    <button data-close-modal>Close</button>
+                <dialog data-modal class="modal">
+                    <div id="modal_nav">
+                        <h2>Air Quality Index (EPA)</h2>
+                        <button data-close-modal>&times;</button>
+                    </div>
+                    <div class="aqi_modal_info">
+                        <h1 id="aqi_modal"></h1>
+                        <h3 id="aqi_modal_text"></h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <span id="PM2_5"></span>
+                            <span class="compound">PM2.5</span>
+                        </li>
+                        <li>
+                            <span id="PM10"></span>
+                            <span class="compound">PM10</span>
+                        </li>
+                        <li>
+                            <span id="SO2"></span>
+                            <span class="compound">SO2</span>
+                        </li>
+                        <li>
+                            <span id="NO2"></span>
+                            <span class="compound">NO2</span>
+                        </li>
+                        <li>
+                            <span id="O3"></span>
+                            <span class="compound">O3</span>
+                        </li>
+                        <li>
+                            <span id="CO"></span>
+                            <span class="compound">CO</span>
+                        </li>
+                    </ul>
                 </dialog>
             </div>
         </section>

@@ -69,13 +69,49 @@ main #general-info .aqi .aqi-button h3 {
 main #general-info .aqi .modal {
   position: absolute;
   padding: 0.5rem;
-  background: rgb(133, 133, 133);
+  background: #252525;
   z-index: 10;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 30rem;
-  height: 20rem;
+  width: 30%;
+  height: 12rem;
+}
+main #general-info .aqi .modal #modal_nav {
+  display: flex;
+}
+main #general-info .aqi .modal #modal_nav h2 {
+  margin: 0.5rem auto auto 1rem;
+}
+main #general-info .aqi .modal #modal_nav button {
+  font-size: 1rem;
+  color: #252525;
+  background-color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+main #general-info .aqi .modal .aqi_modal_info {
+  display: flex;
+  gap: 1rem 1rem;
+  margin: 1rem auto auto 1.25rem;
+}
+main #general-info .aqi .modal .aqi_modal_info #aqi_modal {
+  font-size: 3rem;
+}
+main #general-info .aqi .modal ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+main #general-info .aqi .modal ul li span {
+  display: block;
+}
+main #general-info .aqi .modal ul li #PM2_5, main #general-info .aqi .modal ul li #PM10, main #general-info .aqi .modal ul li #SO2, main #general-info .aqi .modal ul li #NO2, main #general-info .aqi .modal ul li #O3, main #general-info .aqi .modal ul li #CO {
+  font-size: 1.3rem;
+}
+main #general-info .aqi .modal ul li .compound {
+  font-size: 0.75rem;
 }
 main #general-info .aqi dialog::backdrop {
   background-color: rgba(67, 67, 67, 0.4666666667);
