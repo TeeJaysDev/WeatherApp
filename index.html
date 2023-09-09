@@ -70,38 +70,40 @@
                 </dialog>
             </div>
         </section>
-        <section id="other-params">
-            <div class="container">
-                <div class="card wind">
-                    <img src="img/wind.png" alt="wind icon">
-                    <h3 id="wind"></h3>
+        <div class="cards">
+            <section id="other-params">
+                <div class="container">
+                    <div class="card wind">
+                        <img src="img/wind.png" alt="wind icon">
+                        <h3 id="wind"></h3>
+                    </div>
+                    <div class="card pressure">
+                        <img src="img/pressure.png" alt="pressure icon">
+                        <h3 id="pressure"></h3>
+                    </div>
                 </div>
-                <div class="card pressure">
-                    <img src="img/pressure.png" alt="pressure icon">
-                    <h3 id="pressure"></h3>
+                <div class="card secondary-info">
+                    <ul>
+                        <li>
+                            <span id="feels-like">Feels like</span>
+                            <span id="value-feels-like"></span>
+                        </li>
+                        <li>
+                            <span id="humidity">Humidity</span>
+                            <span id="value-humidity"></span>
+                        </li>
+                        <li>
+                            <span id="uv">UV</span>
+                            <span id="value-uv"></span>
+                        </li>
+                        <li>
+                            <span id="clouds">Clouds</span>
+                            <span id="value-clouds"></span>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="card secondary-info">
-                <ul>
-                    <li>
-                        <span id="feels-like">Feels like</span>
-                        <span id="value-feels-like"></span>
-                    </li>
-                    <li>
-                        <span id="humidity">Humidity</span>
-                        <span id="value-humidity"></span>
-                    </li>
-                    <li>
-                        <span id="uv">UV</span>
-                        <span id="value-uv"></span>
-                    </li>
-                    <li>
-                        <span id="clouds">Clouds</span>
-                        <span id="value-clouds"></span>
-                    </li>
-                </ul>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <script src="script.js" defer></script>
 </body>

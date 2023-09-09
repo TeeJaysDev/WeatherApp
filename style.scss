@@ -21,9 +21,6 @@ html {
     scroll-behavior: smooth;
 }
 nav {
-    .plus-menu {
-        
-    }
     .city {
         @include center-horizontally;
         h2 {
@@ -36,6 +33,12 @@ nav {
         float: right;
         margin: -3rem 2rem auto -200px;
     }
+    @media only screen
+    and (max-width: 1500px) {
+        .icon {
+            display: none;
+        }
+    }
 }
 main {
     #general-info {
@@ -46,6 +49,12 @@ main {
                 font-weight: 500;
                 margin-top: 2rem;
             }
+            @media only screen
+            and (max-width: 1500px) {
+            h1 {
+                font-size: 6rem;
+            }
+        }
         }
         .condition {
             @include center-horizontally;
@@ -79,7 +88,7 @@ main {
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 30%;
+                width: 40%;
                 height: 12rem;
                 #modal_nav {
                     display: flex;
@@ -112,7 +121,7 @@ main {
                             display: block;
                         }
                         #PM2_5, #PM10, #SO2, #NO2, #O3, #CO {
-                            font-size: 1.3rem;
+                            font-size: 1.1rem;
                         }
                         .compound {
                             font-size: 0.75rem;
@@ -125,6 +134,52 @@ main {
             }
         }
     }
+    @media only screen
+    and (max-width: 900px) {
+        .modal {
+            width: 100% !important;
+            height: 12rem;
+            #modal_nav {
+                display: flex;
+                h2 {
+                    margin: 0.5rem auto auto 1rem;
+                }
+                button {
+                    font-size: 1rem;
+                    color: #252525;
+                    background-color: #FFFFFF;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                }
+            }
+            .aqi_modal_info {
+                display: flex;
+                gap: 1rem 1rem;
+                margin: 1rem auto auto 1.25rem;
+                #aqi_modal {
+                    font-size: 3rem;
+                }
+            }
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 1rem;
+                li {
+                    span {
+                        display: block;
+                    }
+                    #PM2_5, #PM10, #SO2, #NO2, #O3, #CO {
+                        font-size: 1.1rem;
+                    }
+                    .compound {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+
     #other-params {
         margin-top: 5rem;
         display: flex;
@@ -136,7 +191,6 @@ main {
             border-radius: 32px;
         }
         .container{
-            text-align: center;
             img {
                 display: inline-block;
                 margin: auto 10rem auto 3rem;
@@ -147,12 +201,12 @@ main {
                 margin-right: 2rem;
             }
             .wind {
-                width: 670px;
+                max-width: 670px;
                 display: flex;
                 align-items: center;
             }
             .pressure {
-                width: 670px;
+                max-width: 670px;
                 display: flex;
                 align-items: center;
                 margin-top: 10px;
@@ -179,6 +233,129 @@ main {
                     }
                 }
             }
+        }
+    }
+    @media only screen
+    and (max-width: 1500px) {
+        #other-params {
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 95vw;
+        }
+    }
+    @media only screen
+    and (max-width: 1500px)
+    and (min-width: 510px) {
+        .cards {
+            #other-params {
+                display: block;
+                .wind, .pressure {
+                    height: 10rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                img {
+                    display: inline-block;
+                    margin: auto 10rem auto 3rem;
+                }
+                h3 {
+                    display: inline-block;
+                    font-size: 2rem;
+                    margin-right: 2rem;
+                }
+            }
+            .secondary-info {
+                height: 16rem !important;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    @media only screen
+    and (max-width: 1500px)
+    and (min-width: 670px) {
+        #other-params {
+            img {
+                width: 75px;
+            }
+            h3 {
+                font-size: 2rem !important;
+            }
+            .wind, .pressure {
+                height: 10rem;
+            }
+        }
+        .secondary-info {
+            height: 16rem !important;
+        }
+    }
+    @media only screen
+    and (max-width: 670px)
+    and (min-width: 410px) {
+        .container{
+            img {
+                margin: auto 5rem auto 1.5rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+    @media only screen
+    and (max-width: 670px)
+    and (min-width: 500px) {
+        .container{
+            img {
+                margin: auto 5rem auto 1.5rem;
+                width: 75px
+            }
+            h3 {
+                font-size: 3rem;
+                margin-right: 1rem;
+            }
+        }
+        .secondary-info {
+            height: 15rem !important;
+        }
+    }
+
+    @media only screen
+    and (max-width: 500px)
+    and (min-width: 410px) {
+        .container{
+            img {
+                margin: auto 2rem auto 1.5rem;
+                width: 75px;
+            }
+            h3 {
+                font-size: 1.6rem !important;
+                margin-right: 0.5rem;
+                margin-left: -5rem;
+            }
+            .wind, .pressure{
+                align-items: normal;
+            }
+        }
+    }
+    @media only screen
+    and (max-width: 410px) {
+        .container{
+            .wind, .pressure {
+                height: 7rem !important;
+                img {
+                    width: 45px !important;
+                }
+                h3 {
+                    font-size: 1.2rem !important;
+                    margin-left: -7rem;
+                }
+            }
+        }
+        .secondary-info {
+            height: 15rem !important;
         }
     }
 }

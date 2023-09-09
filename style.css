@@ -27,6 +27,11 @@ nav .icon {
   float: right;
   margin: -3rem 2rem auto -200px;
 }
+@media only screen and (max-width: 1500px) {
+  nav .icon {
+    display: none;
+  }
+}
 
 main #general-info .temperature {
   display: flex;
@@ -36,6 +41,11 @@ main #general-info .temperature h1 {
   font-size: 10rem;
   font-weight: 500;
   margin-top: 2rem;
+}
+@media only screen and (max-width: 1500px) {
+  main #general-info .temperature h1 {
+    font-size: 6rem;
+  }
 }
 main #general-info .condition {
   display: flex;
@@ -74,7 +84,7 @@ main #general-info .aqi .modal {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 30%;
+  width: 40%;
   height: 12rem;
 }
 main #general-info .aqi .modal #modal_nav {
@@ -108,13 +118,55 @@ main #general-info .aqi .modal ul li span {
   display: block;
 }
 main #general-info .aqi .modal ul li #PM2_5, main #general-info .aqi .modal ul li #PM10, main #general-info .aqi .modal ul li #SO2, main #general-info .aqi .modal ul li #NO2, main #general-info .aqi .modal ul li #O3, main #general-info .aqi .modal ul li #CO {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 main #general-info .aqi .modal ul li .compound {
   font-size: 0.75rem;
 }
 main #general-info .aqi dialog::backdrop {
   background-color: rgba(67, 67, 67, 0.4666666667);
+}
+@media only screen and (max-width: 900px) {
+  main .modal {
+    width: 100% !important;
+    height: 12rem;
+  }
+  main .modal #modal_nav {
+    display: flex;
+  }
+  main .modal #modal_nav h2 {
+    margin: 0.5rem auto auto 1rem;
+  }
+  main .modal #modal_nav button {
+    font-size: 1rem;
+    color: #252525;
+    background-color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  main .modal .aqi_modal_info {
+    display: flex;
+    gap: 1rem 1rem;
+    margin: 1rem auto auto 1.25rem;
+  }
+  main .modal .aqi_modal_info #aqi_modal {
+    font-size: 3rem;
+  }
+  main .modal ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+  main .modal ul li span {
+    display: block;
+  }
+  main .modal ul li #PM2_5, main .modal ul li #PM10, main .modal ul li #SO2, main .modal ul li #NO2, main .modal ul li #O3, main .modal ul li #CO {
+    font-size: 1.1rem;
+  }
+  main .modal ul li .compound {
+    font-size: 0.75rem;
+  }
 }
 main #other-params {
   margin-top: 5rem;
@@ -129,9 +181,6 @@ main #other-params .card {
   background: rgba(255, 255, 255, 0.14);
   border-radius: 32px;
 }
-main #other-params .container {
-  text-align: center;
-}
 main #other-params .container img {
   display: inline-block;
   margin: auto 10rem auto 3rem;
@@ -142,12 +191,12 @@ main #other-params .container h3 {
   margin-right: 2rem;
 }
 main #other-params .container .wind {
-  width: 670px;
+  max-width: 670px;
   display: flex;
   align-items: center;
 }
 main #other-params .container .pressure {
-  width: 670px;
+  max-width: 670px;
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -172,4 +221,102 @@ main #other-params .secondary-info ul li {
 }
 main #other-params .secondary-info ul li span:nth-child(1) {
   width: 1000px;
+}
+@media only screen and (max-width: 1500px) {
+  main #other-params {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 95vw;
+  }
+}
+@media only screen and (max-width: 1500px) and (min-width: 510px) {
+  main .cards #other-params {
+    display: block;
+  }
+  main .cards #other-params .wind, main .cards #other-params .pressure {
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .cards #other-params img {
+    display: inline-block;
+    margin: auto 10rem auto 3rem;
+  }
+  main .cards #other-params h3 {
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+  main .cards .secondary-info {
+    height: 16rem !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 1500px) and (min-width: 670px) {
+  main #other-params img {
+    width: 75px;
+  }
+  main #other-params h3 {
+    font-size: 2rem !important;
+  }
+  main #other-params .wind, main #other-params .pressure {
+    height: 10rem;
+  }
+  main .secondary-info {
+    height: 16rem !important;
+  }
+}
+@media only screen and (max-width: 670px) and (min-width: 410px) {
+  main .container img {
+    margin: auto 5rem auto 1.5rem;
+  }
+  main .container h3 {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 670px) and (min-width: 500px) {
+  main .container img {
+    margin: auto 5rem auto 1.5rem;
+    width: 75px;
+  }
+  main .container h3 {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+  main .secondary-info {
+    height: 15rem !important;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width: 410px) {
+  main .container img {
+    margin: auto 2rem auto 1.5rem;
+    width: 75px;
+  }
+  main .container h3 {
+    font-size: 1.6rem !important;
+    margin-right: 0.5rem;
+    margin-left: -5rem;
+  }
+  main .container .wind, main .container .pressure {
+    align-items: normal;
+  }
+}
+@media only screen and (max-width: 410px) {
+  main .container .wind, main .container .pressure {
+    height: 7rem !important;
+  }
+  main .container .wind img, main .container .pressure img {
+    width: 45px !important;
+  }
+  main .container .wind h3, main .container .pressure h3 {
+    font-size: 1.2rem !important;
+    margin-left: -7rem;
+  }
+  main .secondary-info {
+    height: 15rem !important;
+  }
 }/*# sourceMappingURL=style.css.map */
